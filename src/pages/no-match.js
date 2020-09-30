@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const NoMatch = () => (
   <>
-    <h1>Hmmm... can't seem to find that page.</h1>
-    <Link to="/">Take me home</Link>
+    <h1>Ooops... looks like you've hit a dead end</h1>
+    <Link to="/">Let's go home</Link>
   </>
 );
 
