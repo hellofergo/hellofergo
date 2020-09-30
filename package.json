@@ -1,14 +1,18 @@
 {
-  "name": "react-firebase-blog-starter",
+  "name": "hellofergo",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "firebase": "^6.4.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.1"
+    "react-scripts": "^3.4.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hellofergo/hellofergo"
+  },
+  "license": "UNLICENSED",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

@@ -12,7 +12,7 @@ function App() {
     <Router>
       <nav>
         <Link to="/">
-          <h2>My React + Firebase Blog</h2>
+          <h2>hellofergo</h2>
         </Link>
       </nav>
       <main>

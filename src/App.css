@@ -4,11 +4,12 @@ main {
 }
 
 nav {
-  background-color: #039be5;
+  background-color: #000000;
 }
 
 nav a {
   text-decoration: none;
+  text-align: center;
 }
 
 nav a h2 {
@@ -22,8 +23,8 @@ main {
 }
 
 .card {
-  border: 1px solid grey;
-  border-radius: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   margin-top: 24px;
 }
 
