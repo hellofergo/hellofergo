@@ -19,3 +19,4 @@ const Post = ({ match }) => {
 };
 
 export default Post;
+
