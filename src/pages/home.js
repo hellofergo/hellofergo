@@ -35,7 +35,7 @@ const Home = () => {
       <h1>Latest</h1>
       {recipes.map(recipe => (
         <section key={recipe.name} className="card">
-          <img src={recipe.image} alt={recipe.coverImageAlt} />
+          <img src={recipe.image} alt={recipe.imageAlt} />
           <div className="card-content">
             <h2>
               {recipe.name}
@@ -45,7 +45,7 @@ const Home = () => {
                 __html: `${recipe.description.substring(0, 200)}...`
               }}
             ></p>
-            <Link to={`/${recipe.name}`}>Get recipe</Link>
+            <Link to={`/${recipe.slug}`}>Get recipe</Link>
           </div>
         </section>
       ))}

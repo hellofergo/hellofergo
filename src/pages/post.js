@@ -1,21 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
+import { getFirebase } from "../firebase";
 
 const Post = ({ match }) => {
   const slug = match.params.slug;
-  const postSlugs = ["my-first-blog-post", "my-second-blog-post"];
+  const [loading, setLoading] = useState(true);
+  const [currentPost, setCurrentPost] = useState();
 
-  const postDoesNotExist = postSlugs.indexOf(slug) === -1;
+  if (loading && !currentPost) {
+    getFirebase()
+      .database()
+      .ref()
+      .child(`/recipes/${slug}`)
+      .once("value")
+      .then(snapshot => {
+        if (snapshot.val()) {
+          setCurrentPost(snapshot.val());
+        }
+        setLoading(false);
+      });
+  }
+
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
+
+  const postDoesNotExist = !currentPost
   if (postDoesNotExist) {
     return <Redirect to="/404" />;
   }
 
-  return (
-    <>
-      <h1>This is a template for blog posts.</h1>
-      <p>We'll get to this once we've hooked up Firebase!</p>
-    </>
-  );
+
+return (
+  <div>
+    <img src={currentPost.image} alt={currentPost.imageAlt}></img>
+    <h1>{currentPost.name}</h1>
+    <em>{currentPost.datePretty}</em>
+    <p dangerouslySetInnerHTML={{ __html: currentPost.description }}></p>
+  </div>
+);
 };
 
 export default Post;
