@@ -12,7 +12,8 @@ function App() {
     <Router>
       <nav>
         <Link to="/">
-          <h2>hellofergo</h2>
+          <h1>hellofergo</h1>
+          <img src="hellofergo-logo.svg" alt="hellofergo.com logo" width="170" height="60" className="logo"></img>
         </Link>
       </nav>
       <main>

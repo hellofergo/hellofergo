@@ -12,9 +12,13 @@ nav a {
   text-align: center;
 }
 
-nav a h2 {
-  color: #ffffff;
-  margin: 0;
+nav a h1 {
+  display: none;
+}
+
+nav .logo {
+  display: block;
+  margin: 0 auto;
 }
 
 main {
