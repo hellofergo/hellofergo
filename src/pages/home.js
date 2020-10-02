@@ -27,16 +27,16 @@ const Home = () => {
   }
   
   if (loading) {
-    return <h1>Loading...</h1>;
+    return <h3>Loading...</h3>;
   }
 
   return (
     <>
-      <h1>Latest</h1>
+      <p className="intro">A collection of recipes from around the world</p>
       {recipes.map(recipe => (
         <section key={recipe.name} className="card">
+          <Link to={`/${recipe.slug}`}>
           <img src={recipe.image} alt={recipe.imageAlt} />
-          <div className="card-content">
             <h2>
               {recipe.name}
             </h2>
@@ -45,8 +45,7 @@ const Home = () => {
                 __html: `${recipe.description.substring(0, 200)}...`
               }}
             ></p>
-            <Link to={`/${recipe.slug}`}>Get recipe</Link>
-          </div>
+            </Link>
         </section>
       ))}
     </>
