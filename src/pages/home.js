@@ -32,19 +32,20 @@ const Home = () => {
 
   return (
     <>
-      <p className="intro">A collection of recipes from around the world</p>
       {recipes.map(recipe => (
         <section key={recipe.name} className="card">
           <Link to={`/${recipe.slug}`}>
           <img src={recipe.image} alt={recipe.imageAlt} />
+          <div className="details">
             <h2>
               {recipe.name}
             </h2>
             <p
               dangerouslySetInnerHTML={{
-                __html: `${recipe.description.substring(0, 200)}...`
+                __html: `${recipe.datePretty}`
               }}
             ></p>
+            </div>
             </Link>
         </section>
       ))}

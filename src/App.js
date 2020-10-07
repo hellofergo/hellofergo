@@ -24,6 +24,11 @@ function App() {
           <Route path="/:slug" component={Post} />
         </Switch>
       </main>
+      <footer>
+        <h2>What is hellofergo.com?</h2>
+          <p className="bold">Need an easy and proven sourdough recipe? How about something plant based? Or maybe you’re looking for air fryer recipes to test out your new kitchen gadget? We got you.</p>
+<p>hellofergo.com serves up delicious hand-picked recipes from around the world. Be it quick and simple week night meals to weekend tasty treats, we have you covered. Each recipe has been tried and tested by a non-chef at home, so you rest assured it doesn’t take a masterchef contestant or a tonne of fancy equipment to pull off some incredible meals.</p>
+      </footer>
     </Router>
   );
 }
