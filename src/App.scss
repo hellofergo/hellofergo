@@ -1,7 +1,7 @@
 $black: #000000;
 $white: #ffffff;
-$fontstack: 'Source Sans Pro', sans-serif;
-$fontstack2: 'League Gothic', sans-serif;
+$fontstack: 'source-sans-pro', sans-serif;
+$fontstack2: 'league-gothic', sans-serif;
 
 body {
   font-size: 16px;
@@ -17,7 +17,6 @@ p {
 h2 {
   font-size: 28px;
   font-family: $fontstack2;
-  letter-spacing: .5px;
 }
 
 nav {
