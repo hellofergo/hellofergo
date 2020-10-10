@@ -1,7 +1,6 @@
 import config from "../src/config"
 import * as firebase from "firebase/app";
-// eslint-disable-next-line 
-import database from "firebase/database";
+import "firebase/database";
 
 let firebaseCache;
 
