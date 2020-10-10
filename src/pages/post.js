@@ -32,11 +32,13 @@ const Post = ({ match }) => {
 
 
 return (
-  <div>
+  <div className="card">
     <img src={currentPost.image} alt={currentPost.imageAlt}></img>
-    <h1>{currentPost.name}</h1>
-    <em>{currentPost.datePretty}</em>
+    <div className="details">
+    <h2>{currentPost.name}</h2>
+    <p>{currentPost.datePretty}</p>
     <p dangerouslySetInnerHTML={{ __html: currentPost.description }}></p>
+    </div>
   </div>
 );
 };
