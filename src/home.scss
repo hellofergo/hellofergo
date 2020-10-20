@@ -1,0 +1,29 @@
+$black: #000000;
+$white: #ffffff;
+$fontstack: 'source-sans-pro', sans-serif;
+$fontstack2: 'league-gothic', sans-serif;
+
+main {
+  min-height: 3000px;
+}
+
+.page-home {
+.card {
+  img {
+    width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .details {
+    padding: 16px;
+  }
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+}
+}

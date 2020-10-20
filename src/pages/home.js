@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
 import { getFirebase } from "../firebase";
+import "../home.scss";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -32,6 +32,7 @@ const Home = () => {
 
   return (
     <>
+    <div className="page-home">
       {recipes.map(recipe => (
         <section key={recipe.name} className="card">
           <Link to={`/${recipe.slug}`}>
@@ -49,6 +50,7 @@ const Home = () => {
             </Link>
         </section>
       ))}
+      </div>
     </>
   );
 };

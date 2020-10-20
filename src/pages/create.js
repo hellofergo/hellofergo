@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { getFirebase } from "../firebase";
+import "../create.scss";
 
 const Create = ({ history }) => {
   const [name, setName] = useState("");
@@ -51,7 +52,8 @@ const Create = ({ history }) => {
 
   return (
     <>
-      <h1>Create a new recipe</h1>
+    <div className="page-create">
+      <h2>Create a new recipe</h2>
       <section>
         <label>Name</label>
         <input id="title-field" type="text" value={name}
@@ -93,6 +95,7 @@ const Create = ({ history }) => {
         />
           <button onClick={createPost}>Create</button>
       </section>
+      </div>
     </>
   );
 };

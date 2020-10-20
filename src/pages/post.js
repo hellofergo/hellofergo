@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import { getFirebase } from "../firebase";
+import "../post.scss";
 
 const Post = ({ match }) => {
   const slug = match.params.slug;
@@ -32,6 +33,7 @@ const Post = ({ match }) => {
 
 
 return (
+  <div className="page-post">
   <div className="card">
     <img src={currentPost.image} alt={currentPost.imageAlt}></img>
     <div className="details">
@@ -39,6 +41,7 @@ return (
     <p>{currentPost.datePretty}</p>
     <p dangerouslySetInnerHTML={{ __html: currentPost.description }}></p>
     </div>
+  </div>
   </div>
 );
 };
