@@ -9,6 +9,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.4.3"
   },
+  "description": "a recipe app",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hellofergo/hellofergo"
